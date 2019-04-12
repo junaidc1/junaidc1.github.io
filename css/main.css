@@ -189,8 +189,15 @@ textarea {
 
 /* fonts:
 font-family: 'Libre Barcode 39', cursive;
-font-family: 'Megrim', cursive;
+font-family: 'Monoton', cursive;
 */
+
+@font-face {
+    font-family: 'Neon Lights';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neon Lights'), url('../fonts/neon2.woff') format('woff');
+    }
 
 body {
     background-color: black;
@@ -275,10 +282,16 @@ p {
 
 h3 {
     margin: 0;
-    padding: 0;
-    font-size: 2rem;
-    color: blue;
-    font-family: 'Megrim', cursive;
+    padding: 24px 0 20px;
+    font-size: 3rem;
+    line-height: 0;
+    color: #298B00;
+    font-family: 'Neon Lights';
+    text-decoration: none;
+    text-shadow: 1px 0px #fff;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 h3:hover {
@@ -292,19 +305,19 @@ h3:hover {
 
 @-webkit-keyframes neon2 {
     from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+      text-shadow: 0 0 10px #fff, 0 0 20px #61FF00;
     }
     to {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+      text-shadow: 0 0 5px #fff, 0 0 10px #61FF00, 0 0 15px #61FF00;
     }
   }
   
   @-moz-keyframes neon2 {
     from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+      text-shadow: 0 0 10px #fff, 0 0 20px #61FF00;
     }
     to {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+      text-shadow: 0 0 5px #fff, 0 0 10px #61FF00, 0 0 15px #61FF00;
     }
   }
   
@@ -312,10 +325,10 @@ h3:hover {
   
   @keyframes neon2 {
     from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+      text-shadow: 0 0 10px #fff, 0 0 20px #61FF00;
     }
     to {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+      text-shadow: 0 0 5px #fff, 0 0 10px #61FF00, 0 0 15px #61FF00;
     }
   }
 
