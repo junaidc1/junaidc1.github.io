@@ -189,21 +189,15 @@ textarea {
 
 /* fonts:
 font-family: 'Libre Barcode 39', cursive;
-font-family: 'Monoton', cursive;
+font-family: 'Kelly Slab', cursive;
 */
 
-@font-face {
-    font-family: 'Neon Lights';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Neon Lights'), url('../fonts/neon2.woff') format('woff');
-    }
-
 body {
-    background-color: black;
+  background-color: #222222;
+  background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 1px / 16px 16px;
 }
 
-.vimeo-wrapper {
+/* .vimeo-wrapper {
     position: fixed;
     top: 0;
     left: 0;
@@ -215,123 +209,129 @@ body {
  }
  .vimeo-wrapper iframe {
     width: 100vw;
-    height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+    height: 56.25vw; Given a 16:9 aspect ratio, 9/16*100 = 56.25
     min-height: 100vh;
-    min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+    min-width: 177.77vh; Given a 16:9 aspect ratio, 16/9*100 = 177.77 
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0.4;
  }
+ */
 
 .wrapper {
-    margin: 0 auto;
-    padding: 20px;
-    width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 1200px;
 }
 
 .partsColumn {
-    width: 50%;
-    height: 95vh;
-    margin: 0;
-    padding: 20px;
+  width: 50%;
+  height: 95vh;
+  margin: 0;
+  padding: 20px;
 }
 
 .parts {
-    margin: 0 0 20px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border: thin solid coral;
-    border-radius: 6px;
+  margin: 0 0 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: thin solid coral;
+  border-radius: 6px;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 li {
-    list-style: none;
-    margin: 0 0 20px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border: thin solid coral;
-    transition: 0.5s;
-}
-
-li:hover {
-    background-color: black;
-}
-
-li:last-child {
-    margin: 0;
-}
-
-li.active {
-    background-color: yellow;
-    background-image: url(../img/glitch-background.gif);
-    background-size: cover;
-    background-position-y: bottom;
-}
-
-p {
-    margin: 0;
-    padding: 0;
-}
-
-h3 {
-    margin: 0;
-    padding: 24px 0 20px;
-    font-size: 3rem;
-    line-height: 0;
-    color: #298B00;
-    font-family: 'Neon Lights';
-    text-decoration: none;
-    text-shadow: 1px 0px #fff;
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 20px;
+  display: block;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: thin solid black;
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #fff;
+  font-family: 'Kelly Slab', cursive;
+  text-decoration: none;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-h3:hover {
-    -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
-    -moz-animation: neon2 1.5s ease-in-out infinite alternate;
-    animation: neon2 1.5s ease-in-out infinite alternate;
-    color: white;
-  }
+li:hover {
+  background-color: black;
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+  color: white;
+}
+
+li:last-child {
+  margin: 0;
+}
 
 /*glow for webkit*/
 
 @-webkit-keyframes neon2 {
-    from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #61FF00;
-    }
-    to {
-      text-shadow: 0 0 5px #fff, 0 0 10px #61FF00, 0 0 15px #61FF00;
-    }
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #61FF00;
   }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #61FF00, 0 0 15px #61FF00;
+  }
+}
   
-  @-moz-keyframes neon2 {
-    from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #61FF00;
-    }
-    to {
-      text-shadow: 0 0 5px #fff, 0 0 10px #61FF00, 0 0 15px #61FF00;
-    }
+@-moz-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #61FF00;
   }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #61FF00, 0 0 15px #61FF00;
+  }
+}
   
   /*glow*/
   
-  @keyframes neon2 {
-    from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #61FF00;
-    }
-    to {
-      text-shadow: 0 0 5px #fff, 0 0 10px #61FF00, 0 0 15px #61FF00;
-    }
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #61FF00;
   }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #61FF00, 0 0 15px #61FF00;
+  }
+}
 
+.active {
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+  color: white;
+  background-image: url(../img/glitch-background.gif);
+  background-size: cover;
+  background-position-y: bottom;
+  width: 100%;
+  border-radius: 0 2rem 2rem 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.barcode {
+  display: none;
+  margin: 0;
+  padding: 10px 0 0;
+  font-family: 'Libre Barcode 39', cursive;
+  font-size: 2rem;
+  line-height: 1rem;
+}
 
 
  
