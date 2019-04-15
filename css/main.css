@@ -220,13 +220,22 @@ body {
  }
  */
 
-.wrapper {
+.columns {
   margin: 0 auto;
-  padding: 20px;
-  width: 1200px;
+  padding: 0 20px;
+  max-width: 1200px;
 }
 
 .partsColumn {
+  float: left;
+  width: 50%;
+  height: 95vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.descriptionColumn {
+  float: left;
   width: 50%;
   height: 95vh;
   margin: 0;
@@ -236,24 +245,94 @@ body {
 .parts {
   margin: 0 0 20px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: thin solid coral;
-  border-radius: 6px;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style: none;
-  margin: 0 0 20px;
-  padding: 20px;
-  display: block;
   width: 300px;
   background-color: rgba(0, 0, 0, 0.5);
   border: thin solid black;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.parts:hover {
+  background-color: black;
+}
+
+.active {
+  width: 100%;
+  background-image: url(../img/glitch-background.gif);
+  background-size: cover;
+  background-position-y: bottom; 
+  border-right: thin solid #fff;
+}
+
+.neon {
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  text-shadow: neon2 1.5s ease-in-out infinite alternate;
+  color: #ffffff;
+}
+
+.description {
+  margin: 0 0 20px;
+  padding: 20px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top: thin solid #000000;
+  border-bottom: thin solid #000000;
+  border-left: thin solid #ffffff;
+  border-right: thin solid #ffffff;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.description img {
+  width: 180px;
+  margin: 20px 30px 20px auto;
+  display: block;
+  transform: rotate(65deg);
+
+}
+
+/*glow for webkit*/
+
+@-webkit-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #0080FF, 0 0 20px #00FFFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #0080FF, 0 0 15px #00FFFF;
+  }
+}
+  
+@-moz-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #0080FF, 0 0 20px #00FFFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #0080FF, 0 0 15px #00FFFF;
+  }
+}
+  
+  /*glow*/
+  
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #0080FF, 0 0 20px #00FFFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #0080FF, 0 0 15px #00FFFF;
+  }
+}
+
+h1 {
+  color: #ffffff;
+  
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
   font-size: 2rem;
   line-height: 2rem;
   color: #fff;
@@ -264,68 +343,27 @@ li {
   transition: all 0.5s;
 }
 
-li:hover {
-  background-color: black;
-  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
-  animation: neon2 1.5s ease-in-out infinite alternate;
+h2:hover {
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
   color: white;
-}
-
-li:last-child {
-  margin: 0;
-}
-
-/*glow for webkit*/
-
-@-webkit-keyframes neon2 {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #61FF00;
-  }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #61FF00, 0 0 15px #61FF00;
-  }
-}
-  
-@-moz-keyframes neon2 {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #61FF00;
-  }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #61FF00, 0 0 15px #61FF00;
-  }
-}
-  
-  /*glow*/
-  
-@keyframes neon2 {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #61FF00;
-  }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #61FF00, 0 0 15px #61FF00;
-  }
-}
-
-.active {
-  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
-  animation: neon2 1.5s ease-in-out infinite alternate;
-  color: white;
-  background-image: url(../img/glitch-background.gif);
-  background-size: cover;
-  background-position-y: bottom;
-  width: 100%;
-  border-radius: 0 2rem 2rem 0;
 }
 
 p {
   margin: 0;
   padding: 0;
+  color: #ffffff;
 }
 
 .barcode {
   display: none;
+  margin: 0;
+  padding: 10px 0 0;
+  font-family: 'Libre Barcode 39', cursive;
+  font-size: 2rem;
+  line-height: 1rem;
+}
+
+.barcode2 {
   margin: 0;
   padding: 10px 0 0;
   font-family: 'Libre Barcode 39', cursive;
