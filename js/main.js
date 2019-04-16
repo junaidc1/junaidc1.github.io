@@ -10,4 +10,16 @@ $(function(){
         
     });
 
+    $('#partsProcessor').on('click', function(){
+        $('.descriptionColumn').children().hide();
+        $('#descriptionProcessor').toggle();
+
+    });
+
+    $('#partsRAM').on('click', function(){
+        $('.descriptionColumn').children().hide();
+        $('#descriptionRAM').toggle();
+
+    });
+
 });
