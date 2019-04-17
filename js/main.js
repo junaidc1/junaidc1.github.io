@@ -7,19 +7,27 @@ $(function(){
         $(this).siblings().children().removeClass('neon');
         $(this).toggleClass('active');
         $(this).children().toggleClass('neon');
-        
     });
 
     $('#partsProcessor').on('click', function(){
-        $('.descriptionColumn').children().hide();
-        $('#descriptionProcessor').toggle();
+    
+        if($(this).hasClass("active")){
+            $('.descriptionColumn').children().hide();
+            $('#descriptionProcessor').toggle();
+        } else {
+            $('.descriptionColumn').children().hide();
+        }
 
     });
 
     $('#partsRAM').on('click', function(){
-        $('.descriptionColumn').children().hide();
-        $('#descriptionRAM').toggle();
 
+        if($(this).hasClass("active")){
+            $('.descriptionColumn').children().hide();
+            $('#descriptionRAM').toggle();
+        } else {
+            $('.descriptionColumn').children().hide();
+        }
     });
 
 });
