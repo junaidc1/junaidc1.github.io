@@ -30,4 +30,15 @@ $(function(){
         }
     });
 
+    $('#partsHardDrive').on('click', function(){
+
+        if($(this).hasClass("active")){
+            $('.descriptionColumn').children().hide();
+            $('#descriptionHardDrive').slideToggle('1200');
+        } else {
+            $('.descriptionColumn').children().hide();
+        }
+    });
+    
+
 });
