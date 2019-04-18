@@ -206,14 +206,13 @@ header {
 
 .columns {
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20px 50px;
   max-width: 1200px;
 }
 
 .partsColumn {
   float: left;
   width: 50%;
-  height: 95vh;
   margin: 0;
   padding: 20px;
 }
@@ -221,7 +220,6 @@ header {
 .descriptionColumn {
   float: left;
   width: 50%;
-  height: 95vh;
   margin: 0;
   padding: 20px;
 }
@@ -253,6 +251,7 @@ header {
 .neon {
   -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
   -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
   text-shadow: neon2 1.5s ease-in-out infinite alternate;
   color: #ffffff;
 }
@@ -267,9 +266,6 @@ header {
   border-bottom: thin solid #000000;
   border-left: thin solid #ffffff;
   border-right: thin solid #ffffff;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
 #descriptionProcessor img {
@@ -287,6 +283,37 @@ header {
   padding: 0px 20px 30px 0;
   display: block;
   transform: rotate(-15deg);
+}
+
+footer {
+  padding: 15px 20px 10px;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.icons {
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+.junaidesign {
+  margin: 0;
+  padding: 0;
+  float: right;
+  width: 43px;
+  height: 43px;
+  background-image: url(../img/junaidesign-brands.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.junaidesign:hover {
+  background-image: url(../img/junaidesign2-brands.png);
 }
 
 /*glow for webkit*/
@@ -327,6 +354,7 @@ h1 {
   font-family: 'Kelly Slab', cursive;
   font-size: 2.5rem;
   line-height: 2.5rem;
+  text-shadow: 5px 10px 15px #000000;
   
 }
 
@@ -365,6 +393,16 @@ h3.barcode2 {
   font-size: 2rem;
   line-height: 1rem;
   color: #ffffff;
+  text-shadow: 5px 10px 15px #000000;
+}
+
+header.barcode2 {
+  margin: 0;
+  padding: 20px 0 0;
+  font-family: 'Libre Barcode 39 Extended', cursive;
+  font-size: 2rem;
+  line-height: 1rem;
+  color: #ffffff;
 }
 
 p {
@@ -379,11 +417,47 @@ p {
   letter-spacing: .5px;
 }
 
+p.copyright {
+  margin: 0;
+  padding: 10px 0 0 0;
+  display: inline-block;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+}
+
 span.body {
   font-style: normal;
   font-weight: 400;
+  color: #ffffff;
   
 }
+
+.fa-instagram {
+  margin: 0;
+  padding: 0 10px 0 0;
+  color: #ffffff;
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.fa-linkedin {
+  margin: 0;
+  padding: 0 3px 0 0;
+  color: #ffffff;
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.fab:hover {
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+  text-shadow: neon2 1.5s ease-in-out infinite alternate;
+}
+
+
 
 
  
@@ -393,8 +467,8 @@ span.body {
    Modify as content requires.
    ========================= */
 
-   @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media screen and (max-width: 600px) {
+
 }
 
 @media print,

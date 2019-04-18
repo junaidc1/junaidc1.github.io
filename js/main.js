@@ -13,7 +13,7 @@ $(function(){
     
         if($(this).hasClass("active")){
             $('.descriptionColumn').children().hide();
-            $('#descriptionProcessor').toggle();
+            $('#descriptionProcessor').slideToggle('1200');
         } else {
             $('.descriptionColumn').children().hide();
         }
@@ -24,7 +24,7 @@ $(function(){
 
         if($(this).hasClass("active")){
             $('.descriptionColumn').children().hide();
-            $('#descriptionRAM').toggle();
+            $('#descriptionRAM').slideToggle('1200');
         } else {
             $('.descriptionColumn').children().hide();
         }
