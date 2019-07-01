@@ -457,14 +457,63 @@ span.body {
   display: inline-block;
 }
 
-.fab:hover {
+.fa-trophy {
+  margin: 0;
+  padding: 0 10px 0 0;
+  color: #ffffff;
+  font-size: 1.65rem;
+  display: inline-block;
+}
+
+.fa-home {
+  margin: 0;
+  padding: 0 10px 0 0;
+  color: #ffffff;
+  font-size: 1.85rem;
+  display: inline-block;
+}
+
+.fab:hover, .fas:hover {
   -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
   -moz-animation: neon2 1.5s ease-in-out infinite alternate;
   animation: neon2 1.5s ease-in-out infinite alternate;
   text-shadow: neon2 1.5s ease-in-out infinite alternate;
 }
 
+/* =========================
+   JEOPARDY
+   ========================= */
 
+  body.jeopardy {
+    background-color: #cccccc;
+    background: repeating-linear-gradient(45deg, #dddddd 0%, #dddddd 10%, #cccccc 0%, #cccccc 50%) 1px / 16px 16px;
+  }
+
+  h1.jeopardy {
+    margin: 0;
+    padding: 10px 0 0;
+    color: #000000;
+    font-family: 'Kelly Slab', cursive;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    text-shadow: 2px 3px 1px #888888;
+    
+  }
+
+  h3.barcode2-jeopardy {
+    margin: 0;
+    padding: 20px 0 0;
+    font-family: 'Libre Barcode 39 Extended', cursive;
+    font-size: 2rem;
+    line-height: 1rem;
+    color: #000000;
+  }
+
+
+
+/* =========================
+   JEOPARDY
+   ========================= */
 
 
  
